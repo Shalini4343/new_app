@@ -24,9 +24,7 @@ jobs:
       
       - name: Push Docker Image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME }}
-        
-      - name : execute
-        run : docker run ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME }}
+     
       - name : listing
         run : docker image ls
         
